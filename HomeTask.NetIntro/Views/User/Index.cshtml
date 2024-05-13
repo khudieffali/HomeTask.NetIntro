@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout="~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Country</th>
+            <th scope="col">Phone Number</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        @{
+            if(ViewBag.User !=null){
+                @foreach(var item in ViewBag.User){
+                    
+                        <th scope="row">@item</th>
+                }
+            }
+        }
+        </tr>
+        <tr>
+            <th scope="row">@ViewData["Name"]</th>
+            <th scope="row">@ViewData["Surname"]</th>
+            <th scope="row">@ViewData["Age"]</th>
+            <th scope="row">@ViewData["Country"]</th>
+            <th scope="row">@ViewData["PhoneNumber"]</th>
+
+        </tr>
+
+    
+    </tbody>
+</table>
